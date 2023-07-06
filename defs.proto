@@ -1,0 +1,18 @@
+syntax = "proto3";
+package main;
+option go_package = ".;main";
+
+
+message Page {
+    string id = 1;  
+    bytes mobileRules = 2;
+    string test = 3;
+}
+
+message PageRequest {
+  string id = 1;
+}
+
+service Pages {
+  rpc GetPage(PageRequest) returns (Page) {};
+}
