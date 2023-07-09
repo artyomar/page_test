@@ -2,9 +2,9 @@
 // versions:
 // 	protoc-gen-go v1.31.0
 // 	protoc        v3.20.3
-// source: grpc/defs.proto
+// source: page.proto
 
-package main
+package pages
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -33,7 +33,7 @@ type Page struct {
 func (x *Page) Reset() {
 	*x = Page{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_grpc_defs_proto_msgTypes[0]
+		mi := &file_page_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -46,7 +46,7 @@ func (x *Page) String() string {
 func (*Page) ProtoMessage() {}
 
 func (x *Page) ProtoReflect() protoreflect.Message {
-	mi := &file_grpc_defs_proto_msgTypes[0]
+	mi := &file_page_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -59,7 +59,7 @@ func (x *Page) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Page.ProtoReflect.Descriptor instead.
 func (*Page) Descriptor() ([]byte, []int) {
-	return file_grpc_defs_proto_rawDescGZIP(), []int{0}
+	return file_page_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *Page) GetId() string {
@@ -94,7 +94,7 @@ type PageRequest struct {
 func (x *PageRequest) Reset() {
 	*x = PageRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_grpc_defs_proto_msgTypes[1]
+		mi := &file_page_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -107,7 +107,7 @@ func (x *PageRequest) String() string {
 func (*PageRequest) ProtoMessage() {}
 
 func (x *PageRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_grpc_defs_proto_msgTypes[1]
+	mi := &file_page_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -120,7 +120,7 @@ func (x *PageRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PageRequest.ProtoReflect.Descriptor instead.
 func (*PageRequest) Descriptor() ([]byte, []int) {
-	return file_grpc_defs_proto_rawDescGZIP(), []int{1}
+	return file_page_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *PageRequest) GetId() string {
@@ -130,44 +130,44 @@ func (x *PageRequest) GetId() string {
 	return ""
 }
 
-var File_grpc_defs_proto protoreflect.FileDescriptor
+var File_page_proto protoreflect.FileDescriptor
 
-var file_grpc_defs_proto_rawDesc = []byte{
-	0x0a, 0x0f, 0x67, 0x72, 0x70, 0x63, 0x2f, 0x64, 0x65, 0x66, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x12, 0x04, 0x6d, 0x61, 0x69, 0x6e, 0x22, 0x4c, 0x0a, 0x04, 0x50, 0x61, 0x67, 0x65, 0x12,
-	0x0e, 0x0a, 0x02, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x69, 0x64, 0x12,
-	0x20, 0x0a, 0x0b, 0x6d, 0x6f, 0x62, 0x69, 0x6c, 0x65, 0x52, 0x75, 0x6c, 0x65, 0x73, 0x18, 0x02,
-	0x20, 0x01, 0x28, 0x0c, 0x52, 0x0b, 0x6d, 0x6f, 0x62, 0x69, 0x6c, 0x65, 0x52, 0x75, 0x6c, 0x65,
-	0x73, 0x12, 0x12, 0x0a, 0x04, 0x74, 0x65, 0x73, 0x74, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52,
-	0x04, 0x74, 0x65, 0x73, 0x74, 0x22, 0x1d, 0x0a, 0x0b, 0x50, 0x61, 0x67, 0x65, 0x52, 0x65, 0x71,
-	0x75, 0x65, 0x73, 0x74, 0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
-	0x52, 0x02, 0x69, 0x64, 0x32, 0x33, 0x0a, 0x05, 0x50, 0x61, 0x67, 0x65, 0x73, 0x12, 0x2a, 0x0a,
-	0x07, 0x47, 0x65, 0x74, 0x50, 0x61, 0x67, 0x65, 0x12, 0x11, 0x2e, 0x6d, 0x61, 0x69, 0x6e, 0x2e,
-	0x50, 0x61, 0x67, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0a, 0x2e, 0x6d, 0x61,
-	0x69, 0x6e, 0x2e, 0x50, 0x61, 0x67, 0x65, 0x22, 0x00, 0x42, 0x08, 0x5a, 0x06, 0x2e, 0x3b, 0x6d,
-	0x61, 0x69, 0x6e, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+var file_page_proto_rawDesc = []byte{
+	0x0a, 0x0a, 0x70, 0x61, 0x67, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x05, 0x70, 0x61,
+	0x67, 0x65, 0x73, 0x22, 0x4c, 0x0a, 0x04, 0x50, 0x61, 0x67, 0x65, 0x12, 0x0e, 0x0a, 0x02, 0x69,
+	0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x69, 0x64, 0x12, 0x20, 0x0a, 0x0b, 0x6d,
+	0x6f, 0x62, 0x69, 0x6c, 0x65, 0x52, 0x75, 0x6c, 0x65, 0x73, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0c,
+	0x52, 0x0b, 0x6d, 0x6f, 0x62, 0x69, 0x6c, 0x65, 0x52, 0x75, 0x6c, 0x65, 0x73, 0x12, 0x12, 0x0a,
+	0x04, 0x74, 0x65, 0x73, 0x74, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x74, 0x65, 0x73,
+	0x74, 0x22, 0x1d, 0x0a, 0x0b, 0x50, 0x61, 0x67, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x69, 0x64,
+	0x32, 0x35, 0x0a, 0x05, 0x50, 0x61, 0x67, 0x65, 0x73, 0x12, 0x2c, 0x0a, 0x07, 0x47, 0x65, 0x74,
+	0x50, 0x61, 0x67, 0x65, 0x12, 0x12, 0x2e, 0x70, 0x61, 0x67, 0x65, 0x73, 0x2e, 0x50, 0x61, 0x67,
+	0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0b, 0x2e, 0x70, 0x61, 0x67, 0x65, 0x73,
+	0x2e, 0x50, 0x61, 0x67, 0x65, 0x22, 0x00, 0x42, 0x09, 0x5a, 0x07, 0x2e, 0x3b, 0x70, 0x61, 0x67,
+	0x65, 0x73, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
-	file_grpc_defs_proto_rawDescOnce sync.Once
-	file_grpc_defs_proto_rawDescData = file_grpc_defs_proto_rawDesc
+	file_page_proto_rawDescOnce sync.Once
+	file_page_proto_rawDescData = file_page_proto_rawDesc
 )
 
-func file_grpc_defs_proto_rawDescGZIP() []byte {
-	file_grpc_defs_proto_rawDescOnce.Do(func() {
-		file_grpc_defs_proto_rawDescData = protoimpl.X.CompressGZIP(file_grpc_defs_proto_rawDescData)
+func file_page_proto_rawDescGZIP() []byte {
+	file_page_proto_rawDescOnce.Do(func() {
+		file_page_proto_rawDescData = protoimpl.X.CompressGZIP(file_page_proto_rawDescData)
 	})
-	return file_grpc_defs_proto_rawDescData
+	return file_page_proto_rawDescData
 }
 
-var file_grpc_defs_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_grpc_defs_proto_goTypes = []interface{}{
-	(*Page)(nil),        // 0: main.Page
-	(*PageRequest)(nil), // 1: main.PageRequest
+var file_page_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_page_proto_goTypes = []interface{}{
+	(*Page)(nil),        // 0: pages.Page
+	(*PageRequest)(nil), // 1: pages.PageRequest
 }
-var file_grpc_defs_proto_depIdxs = []int32{
-	1, // 0: main.Pages.GetPage:input_type -> main.PageRequest
-	0, // 1: main.Pages.GetPage:output_type -> main.Page
+var file_page_proto_depIdxs = []int32{
+	1, // 0: pages.Pages.GetPage:input_type -> pages.PageRequest
+	0, // 1: pages.Pages.GetPage:output_type -> pages.Page
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -175,13 +175,13 @@ var file_grpc_defs_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_grpc_defs_proto_init() }
-func file_grpc_defs_proto_init() {
-	if File_grpc_defs_proto != nil {
+func init() { file_page_proto_init() }
+func file_page_proto_init() {
+	if File_page_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_grpc_defs_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_page_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Page); i {
 			case 0:
 				return &v.state
@@ -193,7 +193,7 @@ func file_grpc_defs_proto_init() {
 				return nil
 			}
 		}
-		file_grpc_defs_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_page_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*PageRequest); i {
 			case 0:
 				return &v.state
@@ -210,18 +210,18 @@ func file_grpc_defs_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_grpc_defs_proto_rawDesc,
+			RawDescriptor: file_page_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_grpc_defs_proto_goTypes,
-		DependencyIndexes: file_grpc_defs_proto_depIdxs,
-		MessageInfos:      file_grpc_defs_proto_msgTypes,
+		GoTypes:           file_page_proto_goTypes,
+		DependencyIndexes: file_page_proto_depIdxs,
+		MessageInfos:      file_page_proto_msgTypes,
 	}.Build()
-	File_grpc_defs_proto = out.File
-	file_grpc_defs_proto_rawDesc = nil
-	file_grpc_defs_proto_goTypes = nil
-	file_grpc_defs_proto_depIdxs = nil
+	File_page_proto = out.File
+	file_page_proto_rawDesc = nil
+	file_page_proto_goTypes = nil
+	file_page_proto_depIdxs = nil
 }
