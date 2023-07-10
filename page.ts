@@ -13,7 +13,7 @@ import {
 } from "@grpc/grpc-js";
 import * as _m0 from "protobufjs/minimal";
 
-export const protobufPackage = "pages";
+export const protobufPackage = "api";
 
 export interface Page {
   id: string;
@@ -169,7 +169,7 @@ export const PageRequest = {
 export type PagesService = typeof PagesService;
 export const PagesService = {
   getPage: {
-    path: "/pages.Pages/GetPage",
+    path: "/api.Pages/GetPage",
     requestStream: false,
     responseStream: false,
     requestSerialize: (value: PageRequest) => Buffer.from(PageRequest.encode(value).finish()),
@@ -198,7 +198,7 @@ export interface PagesClient extends Client {
   ): ClientUnaryCall;
 }
 
-export const PagesClient = makeGenericClientConstructor(PagesService, "pages.Pages") as unknown as {
+export const PagesClient = makeGenericClientConstructor(PagesService, "api.Pages") as unknown as {
   new (address: string, credentials: ChannelCredentials, options?: Partial<ClientOptions>): PagesClient;
   service: typeof PagesService;
 };

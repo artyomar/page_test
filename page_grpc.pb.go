@@ -4,7 +4,7 @@
 // - protoc             v3.20.3
 // source: page.proto
 
-package pages
+package api
 
 import (
 	context "context"
@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Pages_GetPage_FullMethodName = "/pages.Pages/GetPage"
+	Pages_GetPage_FullMethodName = "/api.Pages/GetPage"
 )
 
 // PagesClient is the client API for Pages service.
@@ -96,7 +96,7 @@ func _Pages_GetPage_Handler(srv interface{}, ctx context.Context, dec func(inter
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Pages_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "pages.Pages",
+	ServiceName: "api.Pages",
 	HandlerType: (*PagesServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
