@@ -2,7 +2,6 @@
   "name": "protobuf_defs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "proto_compile": "protoc --go-grpc_out=paths=source_relative:. --go_out=paths=source_relative:. -I. page.proto && protoc --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=. --ts_proto_opt=outputServices=grpc-js ./page.proto",
     "test": ""
